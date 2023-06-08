@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Igo Store</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Header -->
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#" onclick="recarregarPag()">
+				<img src="loguinho.png" width="50" height="50" alt="Logo da Empresa">
+				<span class="ml-2">Igo Store</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" id="busca">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
+						</form>
+					</li>
+				</ul>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
+
+					<li class="nav-item"><a class="nav-link" href="#" onclick="recarregarPag();">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#" onclick="rolaAteSessao();">Produtos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Sobre nós</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+	<!-- Main Content -->
+	<main class="container">
+		<div class="row border">
+			<div class="col-md-8 col-sm-12 border border-dark mb-5" id="corusel">
+				
+			</div>
+			<div class="col-md-4 col-sm-12 border d-flex justify-content-center">
+				<!-- Filtro de Produtos -->
+				<div class="border border-dark filter-products p-3">
+					<h4>Filtrar Categorias</h4>
+					<form>
+						<div class="form-group">
+							<label for="marca">Categorias:</label>
+							<select class="form-control" id="categoria">
+								<option value="">Todas Categorias</option>
+								<option value="electronics">Eletrônicos</option>
+								<option value="jewelery"">Jóias</option>
+								<option value="men's clothing">Roupas Masculinas</option>
+								<option value="women's clothing">Roupas Femininas</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="precoMin">Preço Mínimo:</label>
+							<input type="number" class="form-control" id="precoMin" min="0">
+						</div>
+						<div class="form-group">
+							<label for="precoMax">Preço Máximo:</label>
+							<input type="number" class="form-control" id="precoMax" min="0">
+						</div>
+						
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block" id="filtrar">Filtrar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center align-items-center my-4">
+			<h1 class="text-center ">Produtos</h1>
+		</div>
+		<div class="row" id="conteudo"> <!--Produtos do site-->
+
+		</div>
+		<div class="m-5">
+			<h3 class="ml-2">Newsletter</h3>
+            <form>
+                <div class="form-row align-items-center justify-content-start d-flex">
+                  <div class="col-auto p-3">
+                    <label class="sr-only" for="inlineFormInput">Cadastro</label>
+                    <input type="email" class="form-control mb-2" id="newsletter" placeholder="Faça seu cadastro...">
+                  </div>
+                  <div class="col-auto ">
+                    <button type="submit" class="btn btn-primary ml-2 mb-2">Cadastrar</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+	</main>
+	<footer class="bg-light">
+		<div class="container py-3">
+			<div class="row">
+				<div class="col-md-3">
+					<h5>Informações de contato</h5>
+					<p>
+						<strong>Endereço:</strong> Av. Principal, 1000<br>
+						<strong>Telefone:</strong> (11) 1234-5678<br>
+						<strong>Email:</strong> contato@igostore.com.br
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h5>Redes sociais</h5>
+					<ul class="list-unstyled">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Instagram</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h5 class="mb-3">Aluno:</h5>
+					<p>
+						<strong>Nome:</strong> Igor Silva de P. Paschoalino<br>
+						<strong>Curso:</strong> Ciencia da Computacão<br>
+						<strong>Matricula:</strong> 824513
+					</p>
+				</div>
+				<div class="col-md-3">
+					<h5 class="mb-4">Métodos de pagamento</h5>
+					<i class="fa-brands fa-cc-visa fa-2x"></i>
+					<i class="fa-brands fa-cc-mastercard fa-2x"></i>
+					<i class="fa-brands fa-paypal fa-2x"></i>
+					<i class="fa-brands fa-pix fa-2x"></i>
+					<i class="fa-brands fa-google-pay fa-2x"></i>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/468a08b18c.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+</body>
+</html>
